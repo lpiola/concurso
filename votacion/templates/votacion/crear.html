@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block titulo %}Votacion - Guarda 14{% endblock %}
+
+
+{% block encabezado %} <div><h3>2° EDICION</h3></div>
+<div><h1>CONCURSO NACIONAL DE VINOS</h1></div>
+{% load static %}
+<div><img src="{% static '/votacion/imagenes/guarda14.JPG'%}"></div>
+<div>Viernes 29 de Julio | Mendoza | Argentina </div>
+{% endblock %}
+
+{% block contenido %}
+
+{% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+<div class="card">
+    <div class="card-header">
+        Votación Concurso Guarda 14
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Datos de la votación</h4>
+        {% include 'votacion/form.html' %}
+    </div>
+    <div class="card-footer text-muted">
+        Footer
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,300 @@
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+       <div class="mb-3">
+          <div class="table-responsive">
+            <table class="table">
+              <tr colspan="3">
+                <td>
+                  <label for="" class="form-label">Fecha</label>
+                  <input type="date" class="form-control" name="fecha" id="" aria-describedby="helpId" placeholder="" value="{{campo.value | default:''}}">
+                  <div class="error">{{formulario.fecha.errors}}</div>
+                </td>
+                <td>
+                  <label for="" class="form-label">Jurado</label>
+                  <input type="number" class="form-control" name="jurado" id="" aria-describedby="helpId" placeholder="" value="{{campo.value | default:''}}">
+                  <div class="error">{{formulario.jurado.errors}}</div>
+                </td>
+                <td>
+                  <label for="" class="form-label">Degustador</label>
+                  <input type="number" class="form-control" name="degustador" id="" aria-describedby="helpId" placeholder="" value="{{campo.value | default:''}}">
+                  <div class="error">{{formulario.degustador.errors}}</div>
+                </td>
+                <td>
+                  <label for="" class="form-label">Muestra</label>
+                  <input type="integer" class="form-control" name="muestra" id="" aria-describedby="helpId" placeholder="" value="{{campo.value | default:''}}">
+                  <div class="error">{{formulario.muestra.errors}}</div>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="error">{{formulario.vista_limpidez.errors}}</div>
+          <div class="error">{{formulario.vista_color.errors}}</div>
+          <div class="error">{{formulario.olfato_intensidad.errors}}</div>
+          <div class="error">{{formulario.olfato_franqueza.errors}}</div>
+          <div class="error">{{formulario.olfato_calidad.errors}}</div>
+          <div class="error">{{formulario.gusto_intensidad.errors}}</div>
+          <div class="error">{{formulario.gusto_franqueza.errors}}</div>
+          <div class="error">{{formulario.gusto_calidad.errors}}</div>
+          <div class="error">{{formulario.gusto_persistencia.errors}}</div>
+          <div class="error">{{formulario.apreciacion_global.errors}}</div>
+
+          <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <th colspan="2"></th>
+                  <th>Excelente</th>
+                  <th>Muy Bueno</th>
+                  <th>Bueno</th>
+                  <th>Regular</th>
+                  <th>Insuficiente</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td rowspan="2">Vista</td>
+                    <td>LIMPIDEZ</td>
+                    <td>
+                      <input type="radio" name="vista_limpidez" value="5">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_limpidez" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_limpidez" value="3">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_limpidez" value="2">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_limpidez" value="1">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>COLOR</td>
+                    <td>
+                      <input type="radio" name="vista_color" value="10">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_color" value="8">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_color" value="6">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_color" value="4">
+                    </td>
+                    <td>
+                      <input type="radio" name="vista_color" value="2">
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th colspan="2"></th>
+                <th>Excelente</th>
+                <th>Muy Bueno</th>
+                <th>Bueno</th>
+                <th>Regular</th>
+                <th>Insuficiente</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="3">Olfato</td>
+                  <td>INTENSIDAD</td>
+                  <td>
+                    <input type="radio" name="olfato_intensidad" value="8">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_intensidad" value="7">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_intensidad" value="6">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_intensidad" value="4">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_intensidad" value="2">
+                  </td>
+                </tr>
+                <tr>
+                  <td>FRANQUEZA</td>
+                  <td>
+                    <input type="radio" name="olfato_franqueza" value="6">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_franqueza" value="5">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_franqueza" value="4">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_franqueza" value="3">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_franqueza" value="2">
+                  </td>
+                </tr>
+                <tr>
+                  <td>CALIDAD</td>
+                  <td>
+                    <input type="radio" name="olfato_calidad" value="16">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_calidad" value="14">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_calidad" value="12">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_calidad" value="10">
+                  </td>
+                  <td>
+                    <input type="radio" name="olfato_calidad" value="8">
+                  </td>
+  
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th colspan="2"></th>
+                <th>Excelente</th>
+                <th>Muy Bueno</th>
+                <th>Bueno</th>
+                <th>Regular</th>
+                <th>Insuficiente</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="4">Gusto</td>
+                  <td>INTENSIDAD</td>
+                  <td>
+                    <input type="radio" name="gusto_intensidad" value="8">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_intensidad" value="7">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_intensidad" value="6">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_intensidad" value="4">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_intensidad" value="2">
+                  </td>
+                </tr>
+                <tr>
+                  <td>FRANQUEZA</td>
+                  <td>
+                    <input type="radio" name="gusto_franqueza" value="6">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_franqueza" value="5">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_franqueza" value="4">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_franqueza" value="3">
+                  </td>
+                  <td>
+                    <input type="radio" name="gusto_franqueza" value="2">
+                  </td>
+
+                </tr>
+                <tr>
+                    <td>CALIDAD</td>
+                    <td>
+                      <input type="radio" name="gusto_calidad" value="22">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_calidad" value="19">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_calidad" value="16">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_calidad" value="13">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_calidad" value="10">
+                    </td>
+  
+                  </tr>
+                  <tr>
+                    <td>PERSISTENCIA</td>
+                    <td>
+                      <input type="radio" name="gusto_persistencia" value="8">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_persistencia" value="7">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_persistencia" value="6">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_persistencia" value="5">
+                    </td>
+                    <td>
+                      <input type="radio" name="gusto_persistencia" value="4">
+                    </td>
+  
+                  </tr>
+              </tbody>
+            </table>
+          </div>       
+
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th colspan="2"></th>
+                <th>Excelente</th>
+                <th>Muy Bueno</th>
+                <th>Bueno</th>
+                <th>Regular</th>
+                <th>Insuficiente</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td rowspan="1">Apreciación Global</td>
+                  <td></td>
+                  <td>
+                    <input type="radio" name="apreciacion_global" value="11">
+                  </td>
+                  <td>
+                    <input type="radio" name="apreciacion_global" value="10">
+                  </td>
+                  <td>
+                    <input type="radio" name="apreciacion_global" value="9">
+                  </td>
+                  <td>
+                    <input type="radio" name="apreciacion_global" value="8">
+                  </td>
+                  <td>
+                    <input type="radio" name="apreciacion_global" value="7">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>       
+
+        </div>
+        <label for="" class="form-label">Observaciones</label>
+        <textarea name="observaciones" id="" cols="30" rows="10" class="form-control"></textarea>
+      
+      </div>
+       {% comment %} <div class="col-12 help-text">{{campo.errors}}</div>
+       {% endcomment %}
+    
+    <input name="" id="" class="btn btn-success" type="submit" value="Guardar Producto">
+    <a name="" id="" class="btn btn-default" href="{% url 'votacion' %}" role="button">Cancelar</a>
+</form>
