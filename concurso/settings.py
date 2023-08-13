@@ -24,10 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=2qm*tf1pln9f_9s2&r)9)t^9%qf$%!kmwvabotyq&i51*daid'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['solucionesregionales.pythonanywhere.com']
+#DEBUG = False para pythonanywhere
 
+#ALLOWED_HOSTS = ['solucionesregionales.pythonanywhere.com']
+
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -128,7 +131,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-STATIC_ROOT = BASE_DIR / 'static_root'
+# STATIC_ROOT = BASE_DIR / 'static_root'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -138,4 +141,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT = os.path.join(BASE_DIR,'') 
 MEDIA_URL = '/imagenes/'
 
-STATIC_ROOT = Path(BASE_DIR / 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -74,8 +74,7 @@ ESTADOS_APRECIACION_GLOBAL =[
         (7, 'insuficiente'),    
     ]
 class Votacion(models.Model):
-    id=models.AutoField(primary_key=True)
-    fecha=models.DateField(verbose_name='fecha')
+    id=models.AutoField(primary_key=True)    
     jurado=models.IntegerField(verbose_name='jurado')
     degustador=models.IntegerField(verbose_name='degustador')
     muestra=models.IntegerField(verbose_name='muestra')      

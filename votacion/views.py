@@ -17,7 +17,7 @@ def nosotros(request):
 
 def votacion(request):
     votacion = Votacion.objects.all
-    return render(request,'votacion/index.html',{'votacion':votacion})
+    return render(request,'votacion/crear.html',{'votacion':votacion})
 
 def crear(request):
     formulario = VotacionForm(request.POST or None,request.FILES or None)
